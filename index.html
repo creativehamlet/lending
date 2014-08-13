@@ -48,7 +48,7 @@
         <script src="assets/js/vendor/respond.min.js"></script>
     </head>
     <body>
-        <section id="top-area">
+        <section id="top-area" class="striped-bg">
         	<header>
              <!-- Navigation -->
                 <nav class="navbar navbar-default" role="navigation">
@@ -121,188 +121,14 @@
                         <!-- /.navbar-collapse -->
                     </div>
                     <!-- /.container -->
-                </nav>   
+                </nav>
             </header>
-            <div id="top-wizard">
-                <strong>Progress <span id="location"></span></strong>
-                <div id="progressbar"></div>
+            <div class="cta-hero">
+                <h1>Find the Right Loan <span>for your business in as little as</span><em> 3 steps</em></h1>
+                <a href="steps.html" title="find a loan" class="button-large">Find a loan</a>
             </div>
         </section>
         <section class="container" id="main">
-            <!-- Start Survey container -->
-            <div id="survey_container">
-                <form name="loan-form" id="wrapped" action="send-action" method="POST">
-                    <div id="middle-wizard">
-                        <div class="step row">
-                            <div class="col-xs-12 main-title">
-                                <h3>Select the best loan for your business.</h3>
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="loan-type row">
-                                    <div class="col-xs-12 col-sm-6 home-box">
-                                        <h4 class="pricing-header">Term Loan</h4>
-                                        <ul>
-                                            <li>Set interest rate, amount and term</li>
-                                            <li>Pre-specified, fixed repayment schedule</li>
-                                            <li>Steadily build your business credit with constant repayments</li>
-                                        </ul>
-                                        <a role="button" title="Next" name="forward" class="button_medium_2 loan-type"> Choose </a>
-                                    </div>
-                                    <!-- Pack 2-->
-                                    <div class="col-xs-12 col-sm-6 home-box">
-                                        <h4 class="pricing-header">Equipment Loan</h4>
-                                        <ul>
-                                            <li>Use an asset to secure its own financing</li>
-                                            <li>Keep ownership throughout term</li>
-                                            <li>Generate income with equipment while paying it off</li>
-                                        </ul>
-                                        <a role="button" title="Choose" name="forward" class="button_medium_2 loan-type"> Choose </a>
-                                    </div>
-                                    <!-- Pack 3-->
-                                    <div class="col-xs-12 col-sm-6 home-box">
-                                        <h4 class="pricing-header">Cash Advance</h4>
-                                        <ul>
-                                            <li>Upfront capital for a fraction of future sales</li>
-                                            <li>Protect cash flow – repayment amount changes relative to sales</li>
-                                        </ul>
-                                        <a role="button" title="Choose" name="forward" class="button_medium_2 loan-type"> Choose </a>
-                                    </div>
-                                    <!-- Pack 4-->
-                                    <div class="col-xs-12 col-sm-6 home-box">
-                                        <h4 class="pricing-header">Invoice Factoring</h4>
-                                        <ul>
-                                            <li>Sell accounts receivable for immediate cash</li>
-                                            <li>As sales increase so does access to additional capital</li>
-                                            <li>Spend less time collecting receivables</li>
-                                        </ul>
-                                        <a role="button" title="Choose" name="forward" class="button_medium_2 loan-type"> Choose </a>
-                                    </div>
-                                    <!-- Pack 5-->
-                                    <div class="col-xs-12 col-sm-6 home-box">
-                                        <h4 class="pricing-header">Working Capital</h4>
-                                        <ul>
-                                            <li>Draw only the amount of funds you need, when you need them</li>
-                                            <li>No interest charged against funds not used</li>
-                                        </ul>
-                                        <a role="button" title="Choose" name="forward" class="button_medium_2 loan-type"> Choose </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="row">
-                                <div class="col-xs-12 main-title">
-                                    <h3>Find a Loan for your Business in 3 Steps</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-md-6">
-                                    <ul class="data-list">
-                                        <li><input type="text" name="businessname" class="required form-control" placeholder="Business name"></li>
-                                        <li><input type="text" name="amount" class="required form-control" placeholder="Amount to borrow"></li>
-                                        <li class="styled-select">
-                                            <select class="form-control required" name="industry">
-                                                <option value="" selected disabled>Primary industry</option>
-                                                <option value="industry 1">industry 1</option>
-                                                <option value="industry 2">industry 2</option>
-                                                <option value="industry 3">industry 3</option>
-                                                <option value="industry 4">industry 4</option>
-                                                <option value="industry 5">industry 5</option>
-                                            </select>
-                                        </li>
-                                        <div class="row">
-                                            <div class="col-xs-12 col-md-6">
-                                                <li><input type="text" name="zipcode" class="required form-control" placeholder="Zipcode"></li>
-                                            </div>
-                                            <div class="col-xs-12 col-md-6">
-                                                <li><input type="number" name="timeinbusiness" class="required form-control" placeholder="Time in business"></li>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </div>
-                                <div class="col-xs-12 col-md-6">
-                                    <ul class="data-list">
-                                        <li><input type="text" name="firstname" class="required form-control" placeholder="First Name"></li>
-                                        <li><input type="text" name="lastname" class="form-control" placeholder="Last Name(optional)"></li>
-                                        <li><input type="email" name="email" class="required form-control" placeholder="Email address"></li>
-                                        <li><input type="tel" name="phone" class="form-control" placeholder="Phone number(optional)"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-lg-8 col-lg-offset-2 col-sm-12">
-                                    <ul class="data-list" id="terms">
-                                        <li>
-                                            <strong>I want Sageworks to send my free business analysis report.</strong>
-                                            <label class="switch-light switch-ios ">
-                                                <input type="checkbox" name="terms" class="required fix_ie8" value="yes">
-                                                <span>
-                                                <span class="ie8_hide">No</span>
-                                                <span>Yes</span>
-                                                </span>
-                                                <a></a>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="step row">
-                            <div class="col-xs-12 main-title">
-                                <h3>Tell us more about your business</h3>
-                            </div>
-                            <div class="col-xs-12">
-                                <p>Once you provide more information about yourself and your business, Sageworks will be able to match you with the best loan options for your needs.</p>
-                                <ul class="data-list">
-                                    <li><input type="text" name="annualsales" class="required form-control" placeholder="Annual sales"></li>
-                                    <li class="styled-select">
-                                        <select class="form-control required" name="creditcardpercent">
-                                            <option value="" selected disabled>Percentage of sales on credit cards</option>
-                                            <option value="percent 1">percent 1</option>
-                                            <option value="percent 2">percent 2</option>
-                                            <option value="percent 3">percent 3</option>
-                                            <option value="percent 4">percent 4</option>
-                                            <option value="percent 5">percent 5</option>
-                                        </select>
-                                    </li>
-                                    <li><input type="text" name="percentchange" class="required form-control" placeholder="Percentage change in sales from previous year"></li>
-                                    <li><input type="text" name="annualcash" class="required form-control" placeholder="Annual cash profit before interest &amp; taxes"></li>
-                                    <li><input type="text" name="annualprofit" class="required form-control" placeholder="Annual profit"></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="step row">
-                            <div class="col-xs-12 main-title">
-                                <h3>Tell us more about your business</h3>
-                            </div>
-                            <div class="col-xs-12">
-                                <p>Once you provide more information about yourself and your business, Sageworks will be able to match you with the best loan options for your needs.</p>
-                                <ul class="data-list">
-                                    <li><input type="text" name="existingpayment" class="required form-control" placeholder="Existing monthly debt payment"></li>
-                                    <li><input type="text" name="totalassets" class="required form-control" placeholder="Total assets"></li>
-                                    <li><input type="text" name="totalliabilities" class="required form-control" placeholder="Total liabilities"></li>
-                                    <li><input type="text" name="cashbalance" class="required form-control" placeholder="Average business cash balance"></li>
-                                    <li class="styled-select">
-                                        <select class="form-control required" name="creditrange">
-                                            <option value="" selected disabled>Estimated personal FICO credit range</option>
-                                            <option value="range 1">range 1</option>
-                                            <option value="range 2">range 2</option>
-                                            <option value="range 3">range 3</option>
-                                            <option value="range 4">range 4</option>
-                                            <option value="range 5">range 5</option>
-                                        </select>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>               
-                    </div>
-                    
-                    <div id="bottom-wizard">
-                        <a role="button" title="Next" name="forward" class="button_medium_2 forward"> Next </a>
-                    </div>
-                </form>
-            </div>
             <div class="row">
                 <div class="col-xs-12">
                     <h3>Identify a Business Loan</h3>
@@ -316,7 +142,7 @@
                     <p>
                     Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
                     </p>
-                    <a href="#" title="read more" class="button_medium_2">Read more</a>
+                    <a href="#" title="read more" class="button-medium">Read more</a>
                 </div>
                 <div class="col-xs-12 col-md-4 col-sm-4 box">
                     <div class="number-circle">2</div>
@@ -324,7 +150,7 @@
                     <p>
                     Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
                     </p>
-                    <a href="#" title="read more" class="button_medium_2">Read more</a>
+                    <a href="#" title="read more" class="button-medium">Read more</a>
                 </div>
                 <div class="col-xs-12 col-md-4 col-sm-4 box">
                     <div class="number-circle">3</div>
@@ -332,7 +158,7 @@
                     <p>
                     Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
                     </p>
-                    <a href="#" title="read more" class="button_medium_2">Read more</a>
+                    <a href="#" title="read more" class="button-medium">Read more</a>
                 </div>
             </div>
         </section>

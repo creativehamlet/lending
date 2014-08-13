@@ -438,6 +438,9 @@ nav {
   background-color: #d5d6d6;
   height: 500px;
 }
+#top-area.striped-bg {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAKUlEQVQIW2NcuGSJDwMM/P/fwAgXAHIYGBmhAlAOSCHjwsWLz4BkYLoAuKcSV/3GxvEAAAAASUVORK5CYII=);
+}
 
 #logo a {
   text-indent: -99999px;
@@ -526,45 +529,26 @@ body {
   -webkit-font-smoothing: antialiased !important;
 }
 
-/* twitter feed*/
-.tweets-next, .tweets-prev {
-  display: inline-block;
-  font-size: 28px;
-  color: #FFF;
-  margin-top: 10px;
-}
-
-.tweets-prev {
-  margin-right: 10px;
-}
-
-.tweet_avatar {
-  float: left;
-}
-
-.tweet_time {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.tweet-control {
-  margin-bottom: 30px;
-}
-
-/* scroll to top */
-#toTop {
-  width: 100px;
-  background: #111;
+.cta-hero {
+  width: 100%;
+  padding-top: 20px;
   text-align: center;
-  padding: 5px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  cursor: pointer;
-  display: none;
-  color: #fff;
-  font-size: 11px;
-  z-index: 999;
+}
+.cta-hero h1 span {
+  font-family: 'Proxima Nova Semi-Bold';
+  font-size: 32px;
+  display: block;
+}
+.cta-hero h1 em {
+  font-family: 'Proxima Nova ScOsf Bold';
+  color: #5091cd;
+  font-style: normal;
+}
+
+.main-title {
+  position: absolute;
+  top: -180px;
+  left: 0;
 }
 
 .loan-type .home-box .pricing-header {
@@ -592,6 +576,47 @@ body {
   background: url(../img/divider.png) no-repeat center top;
   height: 10px;
   margin: 30px 0;
+}
+
+/* scroll to top */
+#toTop {
+  width: 100px;
+  background: #111;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: none;
+  color: #fff;
+  font-size: 11px;
+  z-index: 999;
+}
+
+/* twitter feed*/
+.tweets-next, .tweets-prev {
+  display: inline-block;
+  font-size: 28px;
+  color: #FFF;
+  margin-top: 10px;
+}
+
+.tweets-prev {
+  margin-right: 10px;
+}
+
+.tweet_avatar {
+  float: left;
+}
+
+.tweet_time {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.tweet-control {
+  margin-bottom: 30px;
 }
 
 footer {
@@ -1021,61 +1046,44 @@ ul.data-list-2 li label.error {
   padding: 0 6px;
 }
 
-/** Buttons **/
-.button_medium {
+.button-large, .button-medium {
+  font-family: 'Proxima Nova Bold';
   border: none;
-  background: #282828;
-  color: #fff;
-  padding: 7px 20px;
+  border: 2px solid #5091cd;
+  color: #5091cd;
   text-decoration: none;
-  transition: background .5s ease;
-  -moz-transition: background .5s ease;
-  -webkit-transition: background .5s ease;
-  -o-transition: background .5s ease;
   display: inline-block;
   cursor: pointer;
-  font-weight: 600;
-  text-transform: uppercase;
   outline: none;
+  background: transparent;
+  padding: 0.5em 2em;
+  font-size: 32px;
+  line-height: 20px;
+  border-radius: 0.2em;
+  -webkit-transition: background 0.5s ease;
+  transition: background 0.5s ease;
 }
 
-a.button_medium:hover, .button_medium:hover {
-  background: #00aeef;
-  color: #fff;
-}
-
-.button_medium_2 {
-  border: none;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  border: 2px solid  #282828;
-  color: #282828;
+.button-medium {
+  border: 2px solid #3c3d3d;
+  color: #3c3d3d;
   padding: 7px 20px;
-  text-decoration: none;
-  transition: background .5s ease;
-  -moz-transition: background .5s ease;
-  -webkit-transition: background .5s ease;
-  -o-transition: background .5s ease;
-  display: inline-block;
-  cursor: pointer;
-  font-weight: 600;
-  text-transform: uppercase;
-  outline: none;
-  background: #fff;
+  padding: 0.5em 2em;
+  font-size: 18px;
+  line-height: 20px;
+  border-radius: 0.2em;
 }
 
-a.button_medium_2:hover {
-  background: #00aeef;
-  color: #fff;
-  border: 2px solid  #00aeef;
+a.button-medium:hover, a.button-large:hover, a.button-medium:hover {
+  background: #3799cc;
+  color: white;
+  border: 2px solid #3799cc;
 }
 
 .forward {
   position: absolute;
   right: 40px;
   display: block;
-  width: 80px;
 }
 
 /** Font Face **/
@@ -1138,15 +1146,10 @@ h6 {
   font-family: "Proxima Nova", Arial, sans-serif;
 }
 
-h1, h2 {
-  text-transform: capitalize;
+h1 {
+  font-family: 'Proxima Nova Bold';
+  font-size: 42px;
   text-align: center;
-}
-
-.main-title {
-  position: absolute;
-  top: -180px;
-  left: 0;
 }
 
 h2 {
