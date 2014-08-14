@@ -2987,3 +2987,18 @@ a:focus {
 .social-bookmarks li a:hover {
   background-position: 0 -40px;
 }
+
+/* ADDED BY JAKE */
+input[type="text"].dollar { background-image: url(/images/dollar-icon.png); background-repeat: no-repeat; background-position: 12px center; padding-left: 24px; }
+input[type="text"].percent { background-image: url(/images/percent-sign.png); background-repeat: no-repeat; background-position: 99.5% center; padding-right: 1.2em; }
+.backward { position: absolute; left: 40px; display: block; }
+
+input[type=checkbox].chk-button { top:-3000px;position:absolute; }
+input[type=checkbox].chk-button + label { display: inline-block; margin: 5px 10px 5px 0px; padding: 5px 10px; background-color: #FAFAFA; border: solid 1px #CCC; font-size: 14px; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+input[type=checkbox]:checked.chk-button + label { background-color: #5B9BD5; position: relative; color: white; border-color: #5B9BD5; }
+input[type=checkbox].chk-button + label > span { padding-right: 10px; }
+
+.styled-select { overflow: visible; }
+.loan-type > .icon-checkmark3 { position: relative; left: -10px; }
+.loan-type > .icon-checkmark3:hover { color:white; }
+a.button-medium.checked { background: #3799CC; color: #FFF; border: 2px solid #3799CC; }
