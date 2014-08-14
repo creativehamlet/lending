@@ -438,7 +438,8 @@ nav {
   background-color: #d5d6d6;
   height: 500px;
 }
-#top-area.striped-bg {
+
+.striped-bg {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAKUlEQVQIW2NcuGSJDwMM/P/fwAgXAHIYGBmhAlAOSCHjwsWLz4BkYLoAuKcSV/3GxvEAAAAASUVORK5CYII=);
 }
 
@@ -525,6 +526,38 @@ nav {
   list-style: none;
 }
 
+.nav-sidebar {
+  width: 100%;
+  padding: 8px 0;
+}
+.nav-sidebar .nav {
+  border-right: 1px solid #d5d6d6;
+  margin-bottom: 40px;
+}
+.nav-sidebar a {
+  color: #6f7070;
+  font-family: 'Proxima Nova ScOsf Semi-Bold';
+  -webkit-transition: all 0.08s linear;
+  transition: all 0.08s linear;
+  border-radius: 4px, 0, 0, 4px;
+  -moz-border-radius: 4px, 0, 0, 4px;
+  border-radius: 4px, 0, 0, 4px;
+}
+.nav-sidebar .active a {
+  cursor: default;
+  background-color: #3799cc;
+  color: white;
+}
+.nav-sidebar .active:hover {
+  background-color: #a2a3a3;
+}
+.nav-sidebar .text-overflow a, .nav-sidebar .text-overflow .media-body {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
 body {
   -webkit-font-smoothing: antialiased !important;
 }
@@ -551,7 +584,7 @@ body {
   left: 0;
 }
 
-.loan-type .home-box .pricing-header {
+.loan-type .home-box .box-header {
   display: inline-block;
   text-align: center;
   -webkit-transition: background 0.4s ease-out;
@@ -860,7 +893,6 @@ input.form-control:focus, select.form-control:focus, textarea.form-control:focus
 /** Drop down select: ex Country select ==================== **/
 .styled-select select {
   background: transparent;
-  width: 107%;
   padding: 5px;
   padding-left: 15px;
   border: 0;
@@ -874,7 +906,6 @@ input.form-control:focus, select.form-control:focus, textarea.form-control:focus
 }
 
 .styled-select {
-  width: 100%;
   overflow: hidden;
   height: 44px;
   background: #fbfbfb url(../img/down_arrow_select.png) no-repeat 98% center;
@@ -1046,6 +1077,38 @@ ul.data-list-2 li label.error {
   padding: 0 6px;
 }
 
+#custom_carousel .item {
+  color: #3c3d3d;
+  background-color: white;
+  padding: 20px 0;
+}
+#custom_carousel .controls {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+  background: #d5d6d6;
+}
+#custom_carousel .controls li {
+  display: table-cell;
+  width: 1%;
+  max-width: 90px;
+}
+#custom_carousel .controls.active {
+  background-color: #eee;
+  border-top: 3px solid orange;
+}
+#custom_carousel .controls a > small {
+  overflow: hidden;
+  display: block;
+  font-size: 10px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
 .button-large, .button-medium {
   font-family: 'Proxima Nova Bold';
   border: none;
@@ -1084,6 +1147,18 @@ a.button-medium:hover, a.button-large:hover, a.button-medium:hover {
   position: absolute;
   right: 40px;
   display: block;
+}
+
+.list-group-item {
+  height: auto;
+  min-height: 220px;
+}
+.list-group-item.active small {
+  color: #fff;
+}
+
+.stars {
+  margin: 20px auto 1px;
 }
 
 /** Font Face **/
@@ -1366,7 +1441,7 @@ a:focus {
     padding-right: 15px;
     padding-left: 15px;
   }
-  .home-box .pricing-header {
+  .home-box .box-header {
     min-height: 60px;
   }
   .home-box ul {
