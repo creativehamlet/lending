@@ -7,7 +7,7 @@
  * Copyright 2013. MIT licensed.
  */
 
-.clear:before, .clear:after {
+.clear:before, .clear:after, .progress-arrows li a.clear:before {
   content: ' ';
   display: table;
 }
@@ -15,7 +15,7 @@
 .clear {
   *zoom: 1;
 }
-.clear:after {
+.clear:after, .progress-arrows li a.clear:before {
   clear: both;
 }
 
@@ -795,7 +795,7 @@ ul#footer-nav li {
 }
 
 #middle-wizard {
-  padding: 50px 25px 35px 25px;
+  padding: 90px 25px 35px 25px;
 }
 
 #bottom-wizard {
@@ -1252,6 +1252,16 @@ a.button-medium:hover, a.button-large:hover, a.button-medium:hover {
   }
 }
 
+.term-hints {
+  background: #a2a3a3;
+  padding: 0.5em;
+}
+.term-hints h4 {
+  font-size: 20px;
+  color: white;
+  font-family: "Proxima Nova Semi-Bold";
+}
+
 /** Font Face **/
 @font-face {
   font-family: "Proxima Nova", Arial, sans-serif;
@@ -1509,8 +1519,78 @@ a:focus {
 .bs-wizard .bs-wizard-step.disabled .bs-wizard-dot {
   background: #efefef;
 }
-.bs-wizard .bs-wizard-step.disabled .bs-wizard-dot:after {
+.bs-wizard .bs-wizard-step.disabled .bs-wizard-dot:after, .bs-wizard .bs-wizard-step.disabled .progress-arrows li a.bs-wizard-dot:before, .progress-arrows li .bs-wizard .bs-wizard-step.disabled a.bs-wizard-dot:before {
   opacity: 0;
+}
+
+.progress-arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+}
+.progress-arrows li {
+  display: inline-block;
+  width: 33.33%;
+  line-height: 2em;
+  font-size: 30px;
+  text-indent: 1em;
+  position: relative;
+  border: 1px solid #6f7070;
+  margin-right: -4px;
+}
+@media screen and (max-width: 992px) {
+  .progress-arrows li {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 536px) {
+  .progress-arrows li {
+    font-size: 14px;
+  }
+}
+.progress-arrows li:nth-child(even) {
+  text-indent: 1.3em;
+}
+.progress-arrows li:last-child {
+  text-indent: 1.3em;
+}
+.progress-arrows li:last-child a:after, .progress-arrows li:last-child a:before, .progress-arrows li:last-child a:before {
+  right: 0;
+  border-width: 0 0 0 0;
+}
+.progress-arrows li a {
+  display: block;
+  background: #efefef;
+  color: #3c3d3d;
+  font-weight: "Proxima Nova Semi-Bold";
+  -webkit-transition: all 0 ease;
+  transition: all 0 ease;
+}
+.progress-arrows li a:after, .progress-arrows li a:before {
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: -1em;
+  border-style: solid;
+  border-width: 1em 0 1em 1em;
+  border-color: transparent transparent transparent #efefef;
+  z-index: 10;
+}
+.progress-arrows li a:before {
+  right: -1.04em;
+  border-width: 1.03em 0 1.03em 1.03em;
+  border-color: transparent transparent transparent #6f7070;
+}
+.progress-arrows li.active a {
+  background: #3c3d3d;
+  color: white;
+  z-index: 100;
+}
+.progress-arrows li.active a:after, .progress-arrows li.active a:before {
+  border-left-color: #3c3d3d;
 }
 
 @media only screen and (min-width: 320px) {
@@ -1606,6 +1686,12 @@ a:focus {
     min-height: 180px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .term-hints {
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+  }
+}
 @media only screen and (max-width: 767px) {
   #top-nav {
     width: 100%;
@@ -1697,12 +1783,25 @@ a:focus {
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   #middle-wizard {
-    padding: 40px 60px 35px 60px;
+    padding: 80px 60px 35px;
+  }
+
+  .compare-box {
+    padding: 40px 60px 35px !important;
+  }
+
+  .term-hints {
+    margin-left: -1em;
+    margin-right: -1em;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
   #middle-wizard {
-    padding: 40px 60px 35px 60px;
+    padding: 80px 60px 35px;
+  }
+
+  .compare-box {
+    padding: 40px 60px 35px !important;
   }
 
   #contact {
@@ -1737,7 +1836,7 @@ a:focus {
     text-decoration: underline;
   }
 
-  a[href]:after {
+  a[href]:after, .progress-arrows li a[href]:before {
     content: " (" attr(href) ")";
   }
 
@@ -1745,9 +1844,11 @@ a:focus {
     content: " (" attr(title) ")";
   }
 
-  .ir a:after,
+  .ir a:after, .ir .progress-arrows li a:before, .progress-arrows li .ir a:before,
   a[href^="javascript:"]:after,
-  a[href^="#"]:after {
+  .progress-arrows li a[href^="javascript:"]:before,
+  a[href^="#"]:after,
+  .progress-arrows li a[href^="#"]:before {
     content: "";
   }
 
@@ -2216,7 +2317,7 @@ a:focus {
 			CORE OWL CAROUSEL 1.24
 ---------------------------------------------------*/
 /* clearfix */
-.owl-carousel .owl-wrapper:after {
+.owl-carousel .owl-wrapper:after, .owl-carousel .progress-arrows li a.owl-wrapper:before, .progress-arrows li .owl-carousel a.owl-wrapper:before {
   content: ".";
   display: block;
   clear: both;

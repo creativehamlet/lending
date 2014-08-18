@@ -81,15 +81,22 @@
             <section class="container" id="main">
                 <!-- Start Survey container -->
                 <div id="survey_container">
-                    <div id="top-wizard">
-                        <div id="progressbar"></div>
-                    </div>
                     <form name="loan-form" id="wrapped" action="send-action" method="POST">
                         <div id="middle-wizard">
                             <div class="step">
+                                <ul class="progress-arrows">
+                                    <li class="active"><a>Business Income</a></li>
+                                    <li><a>Business Assets</a></li>
+                                    <li><a>Business Analysis</a></li>
+                                </ul>
                                 <div class="row">
                                     <div class="col-xs-12 main-title">
-                                        <h3>Find a Loan for your Business in 3 Steps</h3>
+                                        <h3>Tell us more about your business.</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p>Once you provide more information about yourself and your business, Sageworks will be able to match you with the best loan options for your needs.</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -121,7 +128,6 @@
                                         <ul class="data-list">
                                             <li><input type="text" name="firstname" class="required form-control" placeholder="First Name"></li>
                                             <li><input type="text" name="lastname" class="form-control" placeholder="Last Name(optional)"></li>
-                                            <li><input type="email" name="email" class="required form-control" placeholder="Email address"></li>
                                             <li><input type="tel" name="phone" class="form-control" placeholder="Phone number(optional)"></li>
                                         </ul>
                                     </div>
@@ -146,11 +152,15 @@
                                 </div>
                             </div>
                             <div class="step row">
+                                <ul class="progress-arrows">
+                                    <li><a>Business Income</a></li>
+                                    <li class="active"><a>Business Assets</a></li>
+                                    <li><a>Business Analysis</a></li>
+                                </ul>
                                 <div class="col-xs-12 main-title">
-                                    <h3>Tell us more about your business</h3>
+                                    <h3>Tell us more about your business.</h3>
                                 </div>
                                 <div class="col-xs-12">
-                                    <p>Once you provide more information about yourself and your business, Sageworks will be able to match you with the best loan options for your needs.</p>
                                     <ul class="data-list">
                                         <li><input type="text" name="annualsales" class="required form-control" placeholder="Annual sales"></li>
                                         <li class="styled-select">
@@ -170,27 +180,46 @@
                                 </div>
                             </div>
                             <div class="step row">
+                                <ul class="progress-arrows">
+                                    <li><a>Business Income</a></li>
+                                    <li><a>Business Assets</a></li>
+                                    <li class="active"><a>Business Analysis</a></li>
+                                </ul>
                                 <div class="col-xs-12 main-title">
-                                    <h3>Tell us more about your business</h3>
+                                    <h3>Tell us more about your business.</h3>
                                 </div>
-                                <div class="col-xs-12">
-                                    <p>Once you provide more information about yourself and your business, Sageworks will be able to match you with the best loan options for your needs.</p>
-                                    <ul class="data-list">
-                                        <li><input type="text" name="existingpayment" class="required form-control" placeholder="Existing monthly debt payment"></li>
-                                        <li><input type="text" name="totalassets" class="required form-control" placeholder="Total assets"></li>
-                                        <li><input type="text" name="totalliabilities" class="required form-control" placeholder="Total liabilities"></li>
-                                        <li><input type="text" name="cashbalance" class="required form-control" placeholder="Average business cash balance"></li>
-                                        <li class="styled-select">
-                                            <select class="form-control required" name="creditrange">
-                                                <option value="" selected disabled>Estimated personal FICO credit range</option>
-                                                <option value="range 1">range 1</option>
-                                                <option value="range 2">range 2</option>
-                                                <option value="range 3">range 3</option>
-                                                <option value="range 4">range 4</option>
-                                                <option value="range 5">range 5</option>
-                                            </select>
-                                        </li>
-                                    </ul>
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="text" name="businessname" class="required form-control" placeholder="Business name">
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="email" name="email" class="required form-control" placeholder="Email address">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-8 col-lg-offset-2 col-sm-12">
+                                            <ul class="data-list" id="terms">
+                                                <li>
+                                                    <strong>Email me my Sageworks Business Analysis Report.</strong>
+                                                    <label class="switch-light switch-ios ">
+                                                        <input type="checkbox" name="terms" class="required fix_ie8" value="yes">
+                                                        <span>
+                                                        <span class="ie8_hide">No</span>
+                                                        <span>Yes</span>
+                                                        </span>
+                                                        <a></a>
+                                                    </label>
+                                                </li>
+                                                <h4>See the loans you qualify for</h4>
+                                                <p><small>This report is for your private use only and will not be shared with any lenders</small></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="term-hints">
+                                            <h4>Before you select the loan options that best fit your unique needs, check out your business’s financial pulse with your complimentary Sageworks Business Analysis Report below.</h4>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -198,38 +227,6 @@
                             <a role="button" title="Next" name="forward" class="button-medium forward"> Next </a>
                         </div>
                     </form>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h3>Identify a Business Loan</h3>
-                        <h4>Get $5,000 - $250,000 in 2 days</h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 col-md-4 col-sm-4 box">
-                        <div class="number-circle">1</div>
-                        <h4>Lorem ipsum</h4>
-                        <p>
-                        Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
-                        </p>
-                        <a href="#" title="read more" class="button-medium">Read more</a>
-                    </div>
-                    <div class="col-xs-12 col-md-4 col-sm-4 box">
-                        <div class="number-circle">2</div>
-                        <h4>Lorem ipsum</h4>
-                        <p>
-                        Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
-                        </p>
-                        <a href="#" title="read more" class="button-medium">Read more</a>
-                    </div>
-                    <div class="col-xs-12 col-md-4 col-sm-4 box">
-                        <div class="number-circle">3</div>
-                        <h4>Lorem ipsum</h4>
-                        <p>
-                        Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
-                        </p>
-                        <a href="#" title="read more" class="button-medium">Read more</a>
-                    </div>
                 </div>
             </section>
         <footer>
