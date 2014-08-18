@@ -100,9 +100,8 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-xs-12 col-md-6">
+                                    <div class="col-xs-12">
                                         <ul class="data-list">
-                                            <li><input type="text" name="businessname" class="required form-control" placeholder="Business name"></li>
                                             <li><input type="text" name="amount" class="required form-control" placeholder="Amount to borrow"></li>
                                             <li class="styled-select">
                                                 <select class="form-control required" name="industry">
@@ -122,13 +121,20 @@
                                                     <li><input type="number" name="timeinbusiness" class="required form-control" placeholder="Time in business"></li>
                                                 </div>
                                             </div>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-12 col-md-6">
-                                        <ul class="data-list">
-                                            <li><input type="text" name="firstname" class="required form-control" placeholder="First Name"></li>
-                                            <li><input type="text" name="lastname" class="form-control" placeholder="Last Name(optional)"></li>
-                                            <li><input type="tel" name="phone" class="form-control" placeholder="Phone number(optional)"></li>
+                                            <li><input type="text" name="annualsales" class="required form-control" placeholder="Annual sales"></li>
+                                            <li class="styled-select">
+                                                <select class="form-control required" name="creditcardpercent">
+                                                    <option value="" selected disabled>Percentage of sales on credit cards</option>
+                                                    <option value="percent 1">percent 1</option>
+                                                    <option value="percent 2">percent 2</option>
+                                                    <option value="percent 3">percent 3</option>
+                                                    <option value="percent 4">percent 4</option>
+                                                    <option value="percent 5">percent 5</option>
+                                                </select>
+                                            </li>
+                                            <li><input type="text" name="percentchange" class="required form-control" placeholder="Percentage change in sales from previous year"></li>
+                                            <li><input type="text" name="annualcash" class="required form-control" placeholder="Annual cash profit before interest &amp; taxes"></li>
+                                            <li><input type="text" name="annualprofit" class="required form-control" placeholder="Annual profit"></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -162,10 +168,13 @@
                                 </div>
                                 <div class="col-xs-12">
                                     <ul class="data-list">
-                                        <li><input type="text" name="annualsales" class="required form-control" placeholder="Annual sales"></li>
+                                        <li><input type="text" name="dept" class="required form-control" placeholder="Existing monthly debt payments"></li>
+                                        <li><input type="text" name="assets" class="required form-control" placeholder="Total assets"></li>
+                                        <li><input type="text" name="liability" class="required form-control" placeholder="Total liabilities"></li>
+                                        <li><input type="text" name="cash" class="required form-control" placeholder="Average business cash on hand"></li>
                                         <li class="styled-select">
-                                            <select class="form-control required" name="creditcardpercent">
-                                                <option value="" selected disabled>Percentage of sales on credit cards</option>
+                                            <select class="form-control required" name="fico">
+                                                <option value="" selected disabled>Approximate personal FICO credit range</option>
                                                 <option value="percent 1">percent 1</option>
                                                 <option value="percent 2">percent 2</option>
                                                 <option value="percent 3">percent 3</option>
@@ -173,9 +182,6 @@
                                                 <option value="percent 5">percent 5</option>
                                             </select>
                                         </li>
-                                        <li><input type="text" name="percentchange" class="required form-control" placeholder="Percentage change in sales from previous year"></li>
-                                        <li><input type="text" name="annualcash" class="required form-control" placeholder="Annual cash profit before interest &amp; taxes"></li>
-                                        <li><input type="text" name="annualprofit" class="required form-control" placeholder="Annual profit"></li>
                                     </ul>
                                 </div>
                             </div>
