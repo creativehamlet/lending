@@ -186,48 +186,354 @@
                                 </div>
                             </div>
                             <div class="step row">
-                                <ul class="progress-arrows">
-                                    <li><a>Business Income</a></li>
-                                    <li><a>Business Assets</a></li>
-                                    <li class="active"><a>Business Analysis</a></li>
-                                </ul>
-                                <div class="col-xs-12 main-title">
-                                    <h3>Tell us more about your business.</h3>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-12 col-md-6">
-                                        <input type="text" name="businessname" class="required form-control" placeholder="Business name">
-                                    </div>
-                                    <div class="col-xs-12 col-md-6">
-                                        <input type="email" name="email" class="required form-control" placeholder="Email address">
-                                    </div>
+                        <ul class="progress-arrows">
+                            <li><a>Business Income</a></li>
+                            <li><a>Business Assets</a></li>
+                            <li class="active"><a>Business Analysis</a></li>
+                        </ul>
+                        <div class="col-xs-12 main-title">
+                            <h3>Tell us more about your business.</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <input type="text" name="businessname" class="required form-control" placeholder="Business name">
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <input type="email" name="email" class="required form-control" placeholder="Email address">
+                            </div>
 
-                                    <div class="row">
-                                        <div class="col-lg-8 col-lg-offset-2 col-sm-12">
-                                            <ul class="data-list" id="terms">
-                                                <li>
-                                                    <strong>Email me my Sageworks Business Analysis Report.</strong>
-                                                    <label class="switch-light switch-ios ">
-                                                        <input type="checkbox" name="terms" class="required fix_ie8" value="yes">
-                                                        <span>
-                                                        <span class="ie8_hide">No</span>
-                                                        <span>Yes</span>
-                                                        </span>
-                                                        <a></a>
-                                                    </label>
-                                                </li>
-                                                <h4>See the loans you qualify for</h4>
-                                                <p><small>This report is for your private use only and will not be shared with any lenders</small></p>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="term-hints">
-                                            <h4>Before you select the loan options that best fit your unique needs, check out your business’s financial pulse with your complimentary Sageworks Business Analysis Report below.</h4>
-                                        </div>
-                                    </div>
+                            <div class="row">
+                                <div class="col-lg-8 col-lg-offset-2 col-sm-12">
+                                    <ul class="data-list" id="terms">
+                                        <li>
+                                            <strong>Email me my Sageworks Business Analysis Report.</strong>
+                                            <label class="switch-light switch-ios ">
+                                                <input type="checkbox" name="terms" class="required fix_ie8" value="yes">
+                                                <span>
+                                                <span class="ie8_hide">No</span>
+                                                <span>Yes</span>
+                                                </span>
+                                                <a></a>
+                                            </label>
+                                        </li>
+                                        <h4>See the loans you qualify for</h4>
+                                        <p><small>This report is for your private use only and will not be shared with any lenders</small></p>
+                                    </ul>
                                 </div>
                             </div>
+                            <div class="row mobile-limit">
+                                <div class="term-hints">
+                                    <h4>Before you select the loan options that best fit your unique needs, check out your business’s financial pulse with your complimentary Sageworks Business Analysis Report below.</h4>
+                                </div>
+                                <dl class="accordion score-accordion">
+                                    <dt>
+                                        <span>The Sageworks Score<br><small>What The Lenders Will Look At</small></span>
+                                        <i class="fa fa-plus"></i>
+                                    </dt>
+                                    <dd class="accordion-inner">
+                                        <div class="metrics-content-wrapper">
+                                            <div class="container-fluid">
+                                                <div class="your-business-rating row">
+                                                    <div class="score-section-header">Your business is rated:</div>
+                                                    <div class="score-table-wrapper col-xs-12">
+                                                        <div class="score-table">
+                                                            <div id="AAA" runat="server" class="score-block score-a-plus">
+                                                                <div class="score-block-inner">
+                                                                    <span id="ratingAAA" runat="server" class="rating">A+</span>
+                                                                </div>
+                                                            </div>
+                                                            <div id="AA" runat="server" class="score-block score-a">
+                                                                <div class="score-block-inner">
+                                                                    <span id="ratingAA" runat="server" class="rating">A</span>
+                                                                </div>
+                                                            </div>
+                                                            <div id="A" runat="server" class="score-block score-a-minus">
+                                                                <div class="score-block-inner">
+                                                                    <span id="ratingA" runat="server" class="rating">A-</span>
+                                                                </div>
+                                                            </div>
+                                                            <div id="BBB" runat="server" class="score-block score-b-plus">
+                                                                <div class="score-block-inner">
+                                                                    <span id="ratingBBB" runat="server" class="rating">B+</span>
+                                                                </div>
+                                                            </div>
+                                                            <div id="BB" runat="server" class="score-block score-b">
+                                                                <div class="score-block-inner">
+                                                                    <span id="ratingBB" runat="server" class="rating">B</span>
+                                                                </div>
+                                                            </div>
+                                                            <div id="B" runat="server" class="score-block score-b-minus">
+                                                                <div class="score-block-inner">
+                                                                    <span id="ratingB" runat="server" class="rating">B-</span>
+                                                                </div>
+                                                            </div>
+                                                            <div id="CCC" runat="server" class="score-block score-c-plus">
+                                                                <div class="score-block-inner">
+                                                                    <span id="ratingCCC" runat="server" class="rating">C+</span>
+                                                                </div>
+                                                            </div>
+                                                            <div id="CC" runat="server" class="score-block score-c">
+                                                                <div class="score-block-inner">
+                                                                    <span id="ratingCC" runat="server" class="rating">C</span>
+                                                                </div>
+                                                            </div>
+                                                            <div id="C" runat="server" class="score-block score-c-minus">
+                                                                <div class="score-block-inner">
+                                                                    <span id="ratingC" runat="server" class="rating">C-</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="rate-range-score-desc row">
+                                                    <div class="rate-range col-md-4">
+                                                        <div class="score-section-header">You may be able to borrow at:</div>
+                                                        <div class="interest-rate-wrapper">
+                                                            <div id="InterestRateText" runat="server" class="interest-rate-text"></div>
+                                                        </div>
+
+                                                        <div class="score-section-header">About the Sageworks Small Business Score</div>
+                                                        <p>The Sageworks Small Business Score provides an overall measure of the creditworthiness of a business. It gives a good indication of a business's ability to take on and repay debt.</p>
+                                                    </div>
+                                                    <div class="score-desc col-md-8">
+                                                        <div class="score-section-header">What does your score mean?</div>
+                                                        <p id="ScoreText" runat="server">The Sageworks Small Business Score provides an overall measure of the creditworthiness of a business. It gives a good indication of a business's ability to take on and repay debt.</p>
+
+                                                        <div class="score-distribution">
+                                                            <div class="score-distribution-container"></div>
+                                                            <div class="score-distribution-text">Distribution of Business Credit Scores</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                    <dt>
+                                        <span>A Closer Look<br><small>See how you stack up against other businesses and learn how to improve your score.</small></span>
+                                        <i class="fa fa-plus"></i>
+                                    </dt>
+                                    <dd class="accordion-inner">
+                                        <div class="financial-strength container-fluid">
+                                            <div class="score-section-header">A. Financial strength of business</div>
+
+                                            <div class="ratio debt-service-coverage row">
+                                                <div class="col-sm-6">
+                                                    <div class="ratio-title">Debt Service Coverage Ratio</div>
+                                                    <div class="range-graph-wrapper">
+                                                        <div class="range-graph-header">
+                                                            <div class="poor">
+                                                                <div class="range-graph-value-desc">Poor</div>
+                                                                <div class="triangle-small triangle-red"></div>
+                                                            </div>
+                                                            <div class="excellent">
+                                                                <div class="range-graph-value-desc">Excellent</div>
+                                                                <div class="triangle-small triangle-green"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="range-graph">
+                                                            <div class="range-graph-unit first" data-value="-2"><div class="ratio-value"></div></div>
+                                                            <div class="range-graph-unit" data-value="0"><div class="ratio-value"></div></div>
+                                                            <div class="range-graph-unit" data-value="2"><div class="ratio-value"></div></div>
+                                                            <div class="range-graph-unit last" data-value="4"><div class="ratio-value"></div></div>
+                                                        </div>
+                                                        <div class="range-graph-footer">
+                                                            <div class="range-graph-value">-2</div>
+                                                            <div class="range-graph-value">0</div>
+                                                            <div class="range-graph-value">2</div>
+                                                            <div class="range-graph-value last">4<span>6</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ratio-desc">
+                                                        <p>The debt service ratio measures your ability to cover ongoing debt payments.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p>A debt service coverage ratio of 2 or higher is typically considered good for a small business. You may improve your debt service coverage ratio by increasing your business's operating profit or by reducing debt payments. A poor debt service coverage ratio will greatly reduce your ability to take on additional loans.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="ratio net-income-to-sales row">
+                                                <div class="col-sm-6">
+                                                    <div class="ratio-title">Net Income to Sales</div>
+                                                    <div class="range-graph-wrapper">
+                                                        <div class="range-graph-header">
+                                                            <div class="poor">
+                                                                <div class="range-graph-value-desc">Poor</div>
+                                                                <div class="triangle-small triangle-red"></div>
+                                                            </div>
+                                                            <div class="excellent">
+                                                                <div class="range-graph-value-desc">Excellent</div>
+                                                                <div class="triangle-small triangle-green"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="range-graph">
+                                                            <div class="range-graph-unit first" data-value="-1"><div class="ratio-value"></div></div>
+                                                            <div class="range-graph-unit last" data-value="0"><div class="ratio-value"></div></div>
+                                                        </div>
+                                                        <div class="range-graph-footer">
+                                                            <div class="range-graph-value">-1</div>
+                                                            <div class="range-graph-value last">0<span>1</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ratio-desc">
+                                                        <p>The net income to sales ratio measures the profitability of your business.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p>This ratio measures how much out of every dollar of sales a company actually keeps in earnings. Generally, you want this ratio to be as close to one as possible, as that indicates a lower proportion of expenses. You may improve the ratio by reducing direct and indirect costs of operating the business. Negative net income is viewed upon unfavorably by lenders.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="ratio cash-to-assets row">
+                                                <div class="col-sm-6">
+                                                    <div class="ratio-title">Cash to Assets Ratio</div>
+                                                    <div class="bar-graph-wrapper">
+                                                        <div class="your-business">
+                                                            <div class="bar-graph-desc">Your Business</div>
+                                                            <div class="bar-graph"></div>
+                                                            <div class="ratio-value"></div>
+                                                        </div>
+                                                        <div class="industry-average">
+                                                            <div class="bar-graph-desc">Industry Average</div>
+                                                            <div class="bar-graph"></div>
+                                                            <div class="ratio-value"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ratio-desc">
+                                                        <p id="CashToAssetsText" runat="server"></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p>A high cash to assets ratio is desirable because the higher the ratio, the more cash the company has available for reintegration into the company, whether it be in upgrades, replacements or paying off debt. It is recommended to manage your business's cash level and ensure that it is sufficiently high to meet monthly payment demands.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="ratio liabilities-to-assets row">
+                                                <div class="col-sm-6">
+                                                    <div class="ratio-title">Liabilities to Assets Ratio</div>
+                                                    <div class="bar-graph-wrapper">
+                                                        <div class="your-business">
+                                                            <div class="bar-graph-desc">Your Business</div>
+                                                            <div class="bar-graph"></div>
+                                                            <div class="ratio-value"></div>
+                                                        </div>
+                                                        <div class="industry-average">
+                                                            <div class="bar-graph-desc">Industry Average</div>
+                                                            <div class="bar-graph"></div>
+                                                            <div class="ratio-value"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ratio-desc">
+                                                        <p id="LiabilitiesToAssetsText" runat="server"></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p>Also known as the debt ratio, the liabilities to assets ratio measures the relative size of your business's debts to its assets. The higher the ratio, the higher the financial risk of a business. It is important to keep your liabilities to assets ratio at a reasonable level, especially as compared to other businesses in your industry (since there are variances in the ratio across industries).</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="score-section-header">B. Credit Score</div>
+
+                                            <div class="ratio credit-score row">
+                                                <div class="col-sm-6">
+                                                    <div class="ratio-desc">
+                                                        <p id="FICOText" runat="server"></p>
+                                                    </div>
+                                                    <div class="credit-score-graph-wrapper">
+                                                        <div id="FICOScoreRed" runat="server" class="credit-score-block red">
+                                                            <%--<div class="triangle-small triangle-red"></div>--%>
+                                                            <div class="credit-score-block-inner">
+                                                                <span class="rating">&lt; 640</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="FICOScoreOrange" runat="server" class="credit-score-block orange">
+                                                            <div class="credit-score-block-inner">
+                                                                <span class="rating">640 - 680</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="FICOScoreYellow" runat="server" class="credit-score-block yellow">
+                                                            <div class="credit-score-block-inner">
+                                                                <span class="rating">681 - 720</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="FICOScoreGreen" runat="server" class="credit-score-block green">
+                                                            <div class="credit-score-block-inner">
+                                                                <span class="rating">&gt; 720</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="credit-score-footer">
+                                                            <div class="worst">Worst</div>
+                                                            <div class="best">Best</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p>Things you can do to improve your credit score include:</p>
+                                                    <ul>
+                                                        <li>- Establish good payment history</li>
+                                                        <li>- Reduce the amount of debt you owe</li>
+                                                        <li>- Increase length of your credit history</li>
+                                                        <li>- Manage the use of new and existing credits responsibly</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="score-section-header">C. General Business Health</div>
+
+                                            <div class="ratio sales-growth row">
+                                                <div class="col-sm-6">
+                                                    <div class="ratio-title">Sales Growth Last Year</div>
+                                                    <div class="bar-graph-wrapper">
+                                                        <div class="your-business">
+                                                            <div class="bar-graph-desc">Your Business</div>
+                                                            <div class="bar-graph"></div>
+                                                            <div class="ratio-value"></div>
+                                                        </div>
+                                                        <div class="industry-average">
+                                                            <div class="bar-graph-desc">Industry Average</div>
+                                                            <div class="bar-graph"></div>
+                                                            <div class="ratio-value"></div>
+                                                        </div>
+                                                        <div class="national-average">
+                                                            <div class="bar-graph-desc">National Average</div>
+                                                            <div class="bar-graph"></div>
+                                                            <div class="ratio-value"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="SalesGrowthDesc" runat="server" class="ratio-desc"></div>
+                                                </div>
+                                                <div id="SalesGrowthText" runat="server" class="col-sm-6"></div>
+                                            </div>
+
+                                        </div>
+                                    </dd>
+                                    <dt>
+                                        <span>How is the Score Calculates?</span>
+                                        <i class="fa fa-plus"></i>
+                                    </dt>
+                                    <dd class="accordion-inner">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p>The Sageworks Small Business Score is based on a proprietary credit-rating model developed by Sageworks, the leader in the financial analysis of private companies. The model is built through rigorous analysis of how businesses' basic financial and descriptive metrics predicts credit events. The model has three main components:</p>
+                                                    <p>Financial Performance, Personal Credit-worthiness, and General Business Health</p>
+                                                    <p>1. We built a quantitative model using Sageworks' database containing thousands of up-to-date private company's financials and industry benchmarks.</p>
+                                                    <p>2. For small businesses, personal credit scores of the primary borrower is a critical piece to the credit equation. We ask for your credit score and factor it into the Business Credit Score based on the size of the business. Because the score is only calculated for your reference, we do not perform a pull of your actual credit score.</p>
+                                                    <p>3. Finally, we calculate a qualitative measure of business health based on a few simple questions about your business.</p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="image-container">
+                                                        <img src="/images/arithmetic-ops.png" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
                         </div>
                         <div id="bottom-wizard">
                             <a role="button" title="Next" name="forward" class="button-medium forward"> Next </a>
@@ -299,13 +605,23 @@
         <script src="assets/js/vendor/fancybox/source/jquery.fancybox.pack.js?v=2.1.4" type="text/javascript"></script>
         <script src="assets/js/vendor/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5" type="text/javascript"></script>
         <script src="assets/js/vendor/fancy_func.js" type="text/javascript"></script>
-        <!-- <script>
-            $(document).ready(function(ev){
-                $('#custom_carousel').on('slide.bs.carousel', function (evt) {
-                    $('#custom_carousel .controls li.active').removeClass('active');
-                    $('#custom_carousel .controls li:eq('+$(evt.relatedTarget).index()+')').addClass('active');
-                })
+        <script>
+            $(document).ready(function(evt){
+                $('.accordion dt').click(function() {
+                    $('.accordion dt').find('i').removeClass('fa-minus'); // Hides the minus sign on click
+                    $(this).find('i').addClass('fa-plus fa-minus'); // add this line
+                    $('.accordion dt').removeClass('active');
+                    $('.accordion-inner').slideUp('normal');
+
+                    if($(this).next().is(':hidden') == true) {
+                        $(this).addClass('active');
+                        $(this).next().slideDown('normal');
+                    }
+
+                });
+
+                $('.accordion-inner').hide();
             });
-        </script> -->
+        </script>
     </body>
 </html>

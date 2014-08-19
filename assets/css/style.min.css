@@ -599,6 +599,14 @@ body {
   font-size: 24px;
 }
 
+.secondary-hero {
+  margin-top: 40px;
+}
+.secondary-hero p {
+  font-size: 18px;
+  min-height: 85px;
+}
+
 .page-header h1 {
   font-family: "Proxima Nova", Arial, sans-serif;
   text-align: left;
@@ -656,6 +664,43 @@ body {
   color: #fff;
   font-size: 11px;
   z-index: 999;
+}
+
+/*  accordion Style */
+.accordion dt {
+  border-left: 0 solid #3c3d3d;
+  border-bottom: 0;
+  margin: 0px;
+  padding: 10px 15px;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: border-left-width 0.3s linear;
+  transition: border-left-width 0.3s linear;
+  z-index: 1;
+}
+.accordion dt:hover {
+  border-left-width: 6px;
+  -webkit-transition: border-left-width 0.3s linear;
+  transition: border-left-width 0.3s linear;
+}
+.accordion dt span {
+  float: left;
+  color: #5091cd;
+  font-family: "Proxima Nova Thin";
+  font-size: 18px;
+}
+.accordion dt span small {
+  color: #3c3d3d;
+  font-family: "Proxima Nova Thin";
+}
+.accordion dt i {
+  float: right;
+  font-size: 14px;
+}
+
+.accordion-inner {
+  padding: 9px 15px;
 }
 
 /* twitter feed*/
@@ -773,6 +818,7 @@ ul#footer-nav li {
   box-shadow: 0 0 5px #6f7070;
   top: -10em;
   z-index: 9;
+  min-width: 382px;
 }
 #survey_container .main-title, .info-container .main-title {
   position: absolute;
@@ -825,7 +871,8 @@ ul#footer-nav li {
 }
 
 #middle-wizard {
-  padding: 50px 25px 35px 25px;
+  padding: 80px 25px 35px;
+  min-width: 395px;
 }
 
 #bottom-wizard {
@@ -883,7 +930,7 @@ ul#footer-nav li {
 
 .box {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 120px;
 }
 
 .box span {
@@ -1137,38 +1184,479 @@ ul.data-list-2 li label.error {
   padding: 0 6px;
 }
 
-#custom_carousel .item {
-  color: #3c3d3d;
-  background-color: white;
-  padding: 20px 0;
-}
-#custom_carousel .controls {
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 0;
-  margin: 0;
-  white-space: nowrap;
-  text-align: center;
-  position: relative;
-  background: #d5d6d6;
-}
-#custom_carousel .controls li {
-  display: table-cell;
-  width: 1%;
-  max-width: 90px;
-}
-#custom_carousel .controls.active {
-  background-color: #eee;
-  border-top: 3px solid orange;
-}
-#custom_carousel .controls a > small {
-  overflow: hidden;
-  display: block;
-  font-size: 10px;
-  margin-top: 5px;
-  font-weight: bold;
-}
+@media all and (min-width: 30em) {
+  .sageworks-score {
+    background-color: white;
+    clear: both;
+  }
 
+  .closer-look {
+    background-color: #ededed;
+  }
+
+  .how-calculated {
+    background-color: white;
+  }
+
+  .metrics-content-wrapper {
+    text-align: center;
+    padding: 2em 0px;
+  }
+
+  .score-table-wrapper {
+    margin: 1em 0;
+    padding: 1em 0;
+    background-color: #ededed;
+    text-align: center;
+  }
+
+  .score-table {
+    margin: 0 auto;
+  }
+
+  .score-section-header {
+    margin-bottom: 1em;
+    color: #5b8ddb;
+    font-size: 0.85em;
+    text-align: left;
+  }
+
+  .score-block {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.75em;
+    display: inline-block;
+  }
+
+  .score-block-inner {
+    height: 60%;
+    padding-top: 20%;
+    background-color: #ededed;
+    text-align: center;
+  }
+
+  .score-a-plus, .score-a, .score-a-minus, .score-b-plus, .score-b,
+  .score-b-minus, .score-c-plus, .score-c, .score-c-minus {
+    color: #3c3d3d;
+  }
+
+  .score-a-plus {
+    background-color: #5091cd;
+  }
+
+  .score-a {
+    background-color: #78aad8;
+  }
+
+  .score-a-minus {
+    background-color: #9fc3e4;
+  }
+
+  .score-b-plus {
+    background-color: #c7dcef;
+  }
+
+  .score-b {
+    background-color: #a2a3a3;
+  }
+
+  .score-b-minus {
+    background-color: #888a8a;
+  }
+
+  .score-c-plus {
+    background-color: #6f7070;
+  }
+
+  .score-c {
+    background-color: #555757;
+  }
+
+  .score-c-minus {
+    background-color: #3c3d3d;
+  }
+
+  .score-table span {
+    width: 2em;
+    height: 1em;
+  }
+
+  .current-score .score-block-inner {
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+  }
+
+  /*.ui-grid-a { margin-top: 1em; }*/
+  .rate-range-score-desc {
+    width: 100%;
+    margin: 2em 0 0px;
+    overflow: hidden;
+  }
+
+  .rate-range {
+    width: 30%;
+    float: left;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+    padding-right: 1em;
+    border-right: 1px solid #b2b2b2;
+  }
+
+  .score-desc {
+    width: 60%;
+    float: left;
+    padding-left: 1em;
+  }
+
+  .score-distribution {
+    text-align: center;
+  }
+
+  .score-distribution-container {
+    height: 160px;
+    background-image: url(/images/score-distribution.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .score-distribution-text {
+    margin: 0 auto;
+    font-size: 0.85em;
+  }
+
+  .interest-rate-wrapper {
+    text-align: center;
+  }
+
+  .interest-rate-text {
+    width: 70%;
+    margin: 1em auto;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+
+  .closer-look .metrics-content-wrapper {
+    margin-top: 1em;
+  }
+
+  .ratio {
+    width: 100%;
+    padding: 1em 0;
+    border-top: 1px solid #b2b2b2;
+    overflow: auto;
+  }
+
+  .ratio .left {
+    width: 34%;
+    float: left;
+    padding-right: 1em;
+  }
+
+  .ratio .right {
+    width: 52%;
+    float: left;
+    padding-left: 1em;
+  }
+
+  .ratio-title {
+    margin-bottom: 1em;
+    font-size: 0.85em;
+    text-align: left;
+  }
+
+  .ratio p {
+    margin: 0 0 0.75em 0;
+  }
+
+  .ratio-desc {
+    margin-top: 1em;
+  }
+
+  .ratio-value {
+    position: relative;
+    width: 0px;
+    height: 10px;
+    margin: 2px 0;
+    background-color: #5b8ddb;
+  }
+
+  .range-graph-wrapper {
+    padding-left: 15px;
+  }
+
+  .range-graph-header {
+    height: 15px;
+  }
+
+  .range-graph-header > div {
+    position: relative;
+    height: inherit;
+    float: left;
+    text-align: left;
+  }
+
+  .range-graph-header .excellent {
+    left: 106px;
+  }
+
+  .range-graph-header .poor {
+    left: -10px;
+  }
+
+  .range-graph {
+    width: 200px;
+    height: 15px;
+    margin-top: 0.25em;
+    background-color: white;
+    border: 1px solid #828282;
+    text-align: left;
+  }
+
+  .range-graph-unit {
+    width: 49px;
+    height: inherit;
+    float: left;
+    border-right: 1px solid #828282;
+  }
+
+  .net-income-to-sales .range-graph-unit {
+    width: 99px;
+  }
+
+  .range-graph-unit.last {
+    border-right: none;
+  }
+
+  .range-graph-footer {
+    width: 202px;
+    overflow: auto;
+  }
+
+  .range-graph-value {
+    width: 49px;
+    float: left;
+    font-size: 0.65em;
+    text-align: left;
+  }
+
+  .net-income-to-sales .range-graph-value {
+    width: 99px;
+  }
+
+  .range-graph-value.last {
+    width: 54px;
+  }
+
+  .net-income-to-sales .range-graph-value.last {
+    width: 102px;
+  }
+
+  .range-graph-value.last > span {
+    float: right;
+  }
+
+  .range-graph-value-desc {
+    font-size: 0.65em;
+  }
+
+  .range-graph-unit.first .range-graph-value, .range-graph-unit.first .range-graph-value-desc {
+    left: 0;
+  }
+
+  .triangle-small {
+    width: 0px;
+    height: 0px;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+  }
+
+  .triangle-red {
+    border-color: #dd4d3e transparent transparent transparent;
+  }
+
+  .triangle-green {
+    border-color: #87bc39 transparent transparent transparent;
+  }
+
+  .range-graph-unit .triangle-small {
+    position: relative;
+    top: -24px;
+    left: 46px;
+  }
+
+  .range-graph-unit.first .triangle-small {
+    left: 0;
+  }
+
+  .bar-graph-wrapper {
+    padding: 0.2em 1em;
+    background-color: white;
+  }
+
+  .bar-graph-wrapper > div {
+    overflow: auto;
+  }
+
+  .bar-graph-wrapper .bar-graph-desc {
+    width: 20%;
+    padding-right: 1em;
+    float: left;
+    font-size: 0.65em;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .bar-graph-wrapper .bar-graph {
+    float: left;
+    width: 100px;
+    height: 15px;
+    background-color: #5091cd;
+  }
+
+  .bar-graph-wrapper .ratio-value {
+    float: left;
+    margin-left: 0.5em;
+    font-size: 0.65em;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .your-business {
+    padding-bottom: 0.25em;
+  }
+
+  .your-business .bar-graph {
+    margin-top: 0.5em;
+  }
+
+  .your-business .ratio-value {
+    margin-top: 0.85em;
+  }
+
+  .industry-average, .national-average {
+    padding-top: 0.25em;
+    border-top: 1px solid #b2b2b2;
+  }
+
+  .industry-average .bar-graph, .national-average .bar-graph {
+    margin-top: 0.25em;
+  }
+
+  .industry-average .ratio-value {
+    margin-top: 0.5em;
+  }
+
+  .credit-score-outer {
+    text-align: center;
+  }
+
+  .credit-score-graph-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    overflow: auto;
+  }
+
+  .credit-score .ratio-desc {
+    margin: 0;
+  }
+
+  .credit-score ul {
+    padding: 0;
+  }
+
+  .credit-score li {
+    list-style-type: none;
+  }
+
+  .credit-score-block {
+    width: 25%;
+    height: 30px;
+    float: left;
+    font-size: 0.65em;
+    text-align: center;
+  }
+
+  .credit-score-block.red {
+    background-color: #dd4d3e;
+  }
+
+  .credit-score-block.orange {
+    background-color: #e99127;
+  }
+
+  .credit-score-block.yellow {
+    background-color: #f4d510;
+  }
+
+  .credit-score-block.green {
+    background-color: #63b346;
+  }
+
+  .credit-score-block-inner {
+    height: 15px;
+    padding-top: 5px;
+    background-color: #ededed;
+  }
+
+  .credit-score-block.current-score .credit-score-block-inner {
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+  }
+
+  .credit-score-footer {
+    margin-top: 3.25em;
+    overflow: auto;
+    clear: both;
+    font-size: 0.65em;
+  }
+
+  .credit-score-footer .worst {
+    float: left;
+  }
+
+  .credit-score-footer .best {
+    float: right;
+  }
+
+  /*.credit-score-triangle { width: 0px; height: 0px; margin: 0 auto; border-style: solid; border-width: 5px 4px 0 4px; }
+  .credit-score-triangle.red { border-color: rgb(221,77,62) transparent transparent transparent; }*/
+  .sales-growth .industry-average {
+    padding-bottom: 0.25em;
+  }
+
+  .how-calculated .metrics-content-wrapper {
+    margin: 1em 0 3em;
+  }
+
+  .how-calculated .metrics-content {
+    overflow: auto;
+  }
+
+  .how-calculated .left {
+    width: 54%;
+    float: left;
+    padding-right: 2em;
+  }
+
+  .how-calculated .right {
+    width: 36%;
+    float: left;
+    padding-left: 2em;
+  }
+
+  .how-calculated .right .image-container {
+    width: 10em;
+  }
+
+  .how-calculated .right .image-container img {
+    width: 10em;
+    height: auto;
+  }
+}
 .button-large, .button-medium {
   font-family: "Proxima Nova Semi-Bold";
   border: none;
@@ -1180,7 +1668,7 @@ ul.data-list-2 li label.error {
   outline: none;
   background: transparent;
   padding: 0.25em 2em;
-  font-size: 30px;
+  font-size: 32px !important;
   line-height: 20px;
   border-radius: 0.2em;
   -webkit-transition: background 0.5s ease;
@@ -1190,11 +1678,13 @@ ul.data-list-2 li label.error {
 .button-medium {
   border: 2px solid #3c3d3d;
   color: #3c3d3d;
-  padding: 7px 20px;
-  padding: 0.5em 2em;
-  font-size: 18px;
+  padding: 0.2em 0.5em;
+  font-size: 18px !important;
   line-height: 20px;
   border-radius: 0.2em;
+}
+.button-medium i {
+  margin: 2px 0 0 10px;
 }
 
 a.button-medium:hover, a.button-large:hover, a.button-medium:hover {
@@ -1283,7 +1773,7 @@ a.button-medium:hover, a.button-large:hover, a.button-medium:hover {
 }
 
 .term-hints {
-  background: #a2a3a3;
+  background: #d5d6d6;
   padding: 0.5em;
 }
 .term-hints h4 {
@@ -1721,7 +2211,7 @@ a:focus {
   }
 }
 @media only screen and (min-width: 1200px) {
-  .term-hints {
+  .term-hints, .score-accordion {
     margin-left: 1.2em;
     margin-right: 1.2em;
   }
@@ -1730,18 +2220,13 @@ a:focus {
   #top-nav {
     width: 100%;
     float: left;
-  }
-
-  #top-nav {
     display: none;
   }
-
   #top-nav ul {
     float: none;
     padding: 20px 0 20px 0;
     margin: 0;
   }
-
   #top-nav ul li {
     float: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -1749,19 +2234,21 @@ a:focus {
     padding: 0;
     margin: 0;
   }
-
   #top-nav ul li:last-child {
     border-bottom: none;
   }
-
   #top-nav ul li a {
     display: block;
     padding: 5px;
   }
-
-  #top-nav ul a#active {
+  #top-nav ul li a#active {
     color: #323232;
     background-color: #ddd;
+  }
+
+  .mobile-limit {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .btn-responsive-menu {
@@ -1824,7 +2311,7 @@ a:focus {
     padding: 40px 60px 35px !important;
   }
 
-  .term-hints {
+  .term-hints, .score-accordion {
     margin-left: -1em;
     margin-right: -1em;
   }
