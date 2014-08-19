@@ -435,9 +435,14 @@ nav {
   border-bottom: 2px dotted #6f7070;
 }
 
-#top-area {
+#top-area, section[id$='toparea'] {
   height: 500px;
   border-bottom: 2px dotted #6f7070;
+}
+
+#top-area.bg-none, section[id$='toparea'].bg-none {
+  height: 100px;
+  border-bottom: none;
 }
 
 #logo a {
@@ -515,8 +520,19 @@ nav {
   display: block !important;
 }
 
-.nav ul {
+nav.navbar-default {
+  background-color: white;
+}
+nav.navbar-default ul {
   list-style: none;
+  margin-top: 0.8em;
+}
+nav.navbar-default ul li {
+  color: #3c3d3d;
+  font-family: "Proxima Nova Bold";
+}
+nav.navbar-default .btn-group {
+  margin-top: 1em;
 }
 
 .nav-sidebar {
@@ -2093,14 +2109,14 @@ a:focus {
   height: 0;
   width: 0;
   position: absolute;
-  right: -1em;
+  right: -0.95em;
   border-style: solid;
   border-width: 1em 0 1em 1em;
   border-color: transparent transparent transparent #efefef;
   z-index: 10;
 }
 .progress-arrows li a:before {
-  right: -1.04em;
+  right: -1em;
   border-width: 1.03em 0 1.03em 1.03em;
   border-color: transparent transparent transparent #6f7070;
 }
