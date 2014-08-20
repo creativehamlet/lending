@@ -622,6 +622,9 @@ body {
   font-size: 18px;
   min-height: 85px;
 }
+.secondary-hero div:first-child {
+  margin-bottom: 20px;
+}
 
 .page-header h1 {
   font-family: "Proxima Nova", Arial, sans-serif;
@@ -1683,7 +1686,7 @@ ul.data-list-2 li label.error {
   cursor: pointer;
   outline: none;
   background: transparent;
-  padding: 0.25em 2em;
+  padding: 0.6em 1em;
   font-size: 32px !important;
   line-height: 20px;
   border-radius: 0.2em;
@@ -2225,6 +2228,11 @@ a:focus {
   .home-box ul {
     min-height: 180px;
   }
+
+  .secondary-hero p {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .term-hints, .score-accordion {
@@ -2358,6 +2366,12 @@ a:focus {
     list-style-type: none;
     float: none;
     display: inline-block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .secondary-hero p {
+    padding-left: 3.6em;
+    padding-right: 3.6em;
   }
 }
 @media print {
