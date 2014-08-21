@@ -841,7 +841,7 @@ ul#footer-nav li {
 }
 #survey_container .main-title, .info-container .main-title {
   position: absolute;
-  top: -170px;
+  top: -180px;
   left: 0;
 }
 
@@ -1991,7 +1991,7 @@ a:focus {
 
 .bs-wizard {
   padding: 0 0 10px 0;
-  margin-top: 60px;
+  margin-top: 65px;
 }
 .bs-wizard .bs-wizard-step {
   padding: 0;
@@ -1999,6 +1999,7 @@ a:focus {
 }
 .bs-wizard .bs-wizard-step .bs-wizard-stepnum {
   color: #5091cd;
+  font-family: "Proxima Nova ScOsf Semi-Bold";
   font-size: 16px;
   margin-bottom: 5px;
 }
@@ -2124,12 +2125,13 @@ a:focus {
   border-color: transparent transparent transparent #6f7070;
 }
 .progress-arrows li.active a {
-  background: #3c3d3d;
+  background: #5091cd;
   color: white;
+  font-family: "Proxima Nova Semi-Bold";
   z-index: 100;
 }
 .progress-arrows li.active a:after, .progress-arrows li.active a:before {
-  border-left-color: #3c3d3d;
+  border-left-color: #5091cd;
 }
 
 @media only screen and (min-width: 320px) {
