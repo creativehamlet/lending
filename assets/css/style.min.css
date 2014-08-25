@@ -427,6 +427,8 @@ nav {
 }
 
 .logo {
+  position: relative;
+  z-index: 2;
   width: 70%;
 }
 
@@ -540,9 +542,34 @@ nav.navbar-default ul li ul li a {
 }
 nav.navbar-default .btn-group {
   margin-top: 1em;
+  margin-bottom: 0;
+  margin-right: 0;
 }
 nav.navbar-default button {
   margin-top: 1em;
+}
+nav.navbar-default .navbar-collapse {
+  max-height: 100%;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  nav.navbar-default .navbar-collapse {
+    position: relative;
+    z-index: 1;
+    background: white;
+    -webkit-box-shadow: 0 3px 3px 0 #3c3d3d;
+    box-shadow: 0 3px 3px 0 #3c3d3d;
+  }
+}
+nav.navbar-default .navbar-collapse.collapse.in ul {
+  position: relative;
+  left: 1em;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+nav.navbar-default .navbar-collapse.collapse.in .btn-group {
+  margin-bottom: 2em;
+  margin-right: 2em;
 }
 
 .nav-sidebar {
@@ -605,8 +632,6 @@ body {
 
 #main-area {
   height: 300px;
-  -webkit-box-shadow: 0px -3px 7px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px -3px 7px rgba(0, 0, 0, 0.2);
   border-bottom: 2px dotted #6f7070;
   margin-bottom: 1em;
 }
@@ -1784,20 +1809,21 @@ ul.data-list-2 li label.error {
 .button-large, .button-medium {
   font-family: "Proxima Nova Bold";
   border: none;
-  border: 2px solid #3799cc;
+  border: 2px solid transparent;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
   outline: none;
   background: #3799cc;
   color: white;
-  border: 2px solid #3799cc;
   padding: 0.6em 1em;
   font-size: 32px;
   line-height: 20px;
   border-radius: 0.2em;
   -webkit-transition: background 0.5s ease;
   transition: background 0.5s ease;
+  -webkit-box-shadow: 0px 1px 2px #3c3d3d;
+  box-shadow: 0px 1px 2px #3c3d3d;
 }
 .button-large.btn-bottom, .btn-bottom.button-medium {
   margin-top: 0.5em;
@@ -1811,6 +1837,8 @@ ul.data-list-2 li label.error {
   font-size: 18px;
   line-height: 20px;
   border-radius: 0.2em;
+  -webkit-box-shadow: 0 0 0 #eeeeee;
+  box-shadow: 0 0 0 #eeeeee;
 }
 .button-medium i {
   margin: 2px 0 0 10px;
@@ -1827,7 +1855,7 @@ ul.data-list-2 li label.error {
 a.button-large:hover, a.button-medium:hover {
   background: #3c3d3d;
   color: white;
-  border: 2px solid #3c3d3d;
+  border: 2px solid transparent;
 }
 a.button-medium:hover {
   background: #5091cd;
@@ -2535,6 +2563,9 @@ a:focus {
   }
   #middle-wizard.compare-box .loan-col-custom {
     width: 50%;
+  }
+  #middle-wizard.compare-box .loan-col-custom:last-child {
+    width: 100%;
   }
 
   .title-block {
