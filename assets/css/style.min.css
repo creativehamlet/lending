@@ -1923,20 +1923,27 @@ a.button-medium:hover {
 .forward {
   position: absolute;
   top: 10px;
-  right: 40px;
+  right: 20px;
   display: block;
-  border: 2px solid #5091cd;
-  color: #5091cd;
   margin-bottom: 20px;
+  padding: 0.5em 2.5em;
+  font-size: 20px;
+  line-height: 1.1em;
+  border-radius: 0.2em;
+  background: #5091cd;
+  border: none;
+  color: white;
 }
 .forward:hover {
+  background: #3c3d3d !important;
   color: white;
+  border: none !important;
 }
 
 .backward {
   position: absolute;
   top: 10px;
-  right: 150px;
+  right: 170px;
   display: block;
 }
 
@@ -2361,6 +2368,7 @@ a:focus {
   border: 1px solid #6f7070;
   margin-right: -4px;
   text-align: center;
+  vertical-align: text-bottom;
 }
 @media screen and (max-width: 992px) {
   .progress-arrows li {
