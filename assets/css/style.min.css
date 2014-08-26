@@ -562,8 +562,8 @@ nav.navbar-default .navbar-collapse {
     position: relative;
     z-index: 1;
     background: white;
-    -webkit-box-shadow: 0 3px 3px 0 #3c3d3d;
-    box-shadow: 0 3px 3px 0 #3c3d3d;
+    -webkit-box-shadow: 0 1px 3px 0 #a2a3a3;
+    box-shadow: 0 1px 3px 0 #a2a3a3;
   }
 }
 nav.navbar-default .navbar-collapse.collapse.in ul {
@@ -2508,6 +2508,10 @@ a:focus {
   #top-nav ul li a#active {
     color: #323232;
     background-color: #ddd;
+  }
+
+  #middle-wizard p {
+    margin: 0 0 20px;
   }
 
   .lending-list .img-responsive {
