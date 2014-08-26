@@ -543,7 +543,7 @@ nav.navbar-default ul li ul li a {
 nav.navbar-default .chat-button {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: calc(10% - 10px);
 }
 nav.navbar-default .btn-group {
   margin-top: 1em;
@@ -614,7 +614,7 @@ nav.navbar-default .navbar-nav li a:hover {
   color: white;
 }
 .nav-sidebar .nav li.active a {
-  background-color: #3799cc;
+  background-color: #5091cd;
   color: white;
 }
 .nav-sidebar h4 {
@@ -984,7 +984,7 @@ ul#footer-nav li {
   box-shadow: 0 0 5px #6f7070;
   top: -10em;
   z-index: 9;
-  min-width: 382px;
+  min-width: 100%;
 }
 #survey_container .main-title, .info-container .main-title {
   position: absolute;
@@ -1069,7 +1069,7 @@ ul#footer-nav li {
 
 #middle-wizard {
   padding: 80px 80px 15px;
-  min-width: 395px;
+  min-width: 100%;
 }
 #middle-wizard p {
   margin: 0 40px 20px;
@@ -1221,7 +1221,7 @@ input.form-control:focus, select.form-control:focus, textarea.form-control:focus
 .styled-select {
   overflow: hidden;
   height: 44px;
-  background: #fbfbfb url(../img/down_arrow_select.png) no-repeat 98% center;
+  background: #fbfbfb url(../img/down_arrow_select.png) no-repeat calc(100% - 10px) center;
   border: 2px solid #d5d5d5;
   margin-bottom: 15px;
 }
@@ -1872,7 +1872,7 @@ ul.data-list-2 li label.error {
   display: inline-block;
   cursor: pointer;
   outline: none;
-  background: #3799cc;
+  background: #5091cd;
   color: white;
   padding: 0.6em 1em;
   font-size: 32px;
@@ -1948,13 +1948,13 @@ a.button-medium:hover {
 }
 
 .btn-primary {
-  background-color: #3799cc;
-  border-color: #205d7d;
+  background-color: #5091cd;
+  border-color: #295e8e;
   font-family: "Proxima Nova Bold";
 }
 .btn-primary:hover {
-  background-color: #205d7d;
-  border-color: #0b212c;
+  background-color: #295e8e;
+  border-color: #12293f;
 }
 
 .btn-default {
@@ -2280,7 +2280,6 @@ a:focus {
 .bs-wizard {
   padding: 0 0 10px 0;
   margin-top: 65px;
-  min-width: 430px;
 }
 .bs-wizard .bs-wizard-step {
   padding: 0;
@@ -2331,7 +2330,7 @@ a:focus {
 }
 .bs-wizard .bs-wizard-step:first-child .progress {
   left: 50%;
-  width: 50%;
+  width: 100%;
 }
 .bs-wizard .bs-wizard-step:first-child.active .progress .progress-bar {
   width: 0%;
@@ -2419,10 +2418,10 @@ a:focus {
 }
 
 @media only screen and (min-width: 320px) {
-  .main-title h1 {
-    font-size: 24px;
-    line-height: 26px;
-    margin-top: 25px;
+  .main-title h3 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 1em;
   }
 
   #survey_container, .info-container {
@@ -2459,10 +2458,8 @@ a:focus {
   }
 }
 @media only screen and (min-width: 480px) {
-  .main-title h1 {
-    font-size: 24px;
-    line-height: 26px;
-    margin-top: 30px;
+  .main-title h3 {
+    font-size: 26px;
   }
 
   .main-title p {
@@ -2500,6 +2497,10 @@ a:focus {
   }
 }
 @media only screen and (min-width: 991px) {
+  .main-title h3 {
+    font-size: 32px;
+  }
+
   .loan-col-custom {
     width: 20%;
   }
@@ -2547,9 +2548,36 @@ a:focus {
     background-color: #ddd;
   }
 
+  .compare-box p {
+    margin: -30px 10px 20px !important;
+  }
+  .compare-box .title-block {
+    font-size: 18px !important;
+  }
+
+  .button-medium:hover {
+    background: transparent !important;
+    border: 2px solid #5091cd !important;
+    color: #5091cd !important;
+  }
+
   .styled-select {
     width: 94%;
     margin-left: 15px;
+  }
+
+  .bs-wizard {
+    margin: 0 auto;
+  }
+  .bs-wizard .bs-wizard-step {
+    margin-top: 75px;
+  }
+  .bs-wizard .bs-wizard-step .progress {
+    margin: 25px 0;
+  }
+
+  .bs-wizard-stepnum {
+    font-size: 10px !important;
   }
 
   #middle-wizard p {
@@ -2642,7 +2670,7 @@ a:focus {
     width: 50%;
   }
   #middle-wizard.compare-box .loan-col-custom:last-child {
-    width: 100%;
+    margin-left: 25%;
   }
 
   .title-block {
