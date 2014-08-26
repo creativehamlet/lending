@@ -540,6 +540,11 @@ nav.navbar-default ul li ul li a {
   font-family: "Proxima Nova ScOsf Semi-Bold";
   font-size: 16px;
 }
+nav.navbar-default .chat-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
 nav.navbar-default .btn-group {
   margin-top: 1em;
   margin-bottom: 0;
@@ -570,6 +575,12 @@ nav.navbar-default .navbar-collapse.collapse.in ul {
 nav.navbar-default .navbar-collapse.collapse.in .btn-group {
   margin-bottom: 2em;
   margin-right: 2em;
+}
+nav.navbar-default .navbar-nav li a {
+  color: #3c3d3d;
+}
+nav.navbar-default .navbar-nav li a:hover {
+  color: #6f7070;
 }
 
 .nav-sidebar {
@@ -756,6 +767,24 @@ body {
 .list-group-item:first-child {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
+}
+
+.lender-list h2 {
+  font-size: 24px;
+  line-height: 0;
+  color: #5091cd;
+  margin-top: 10px;
+}
+.lender-list h4 {
+  text-align: left;
+}
+.lender-list p {
+  margin: 0 !important;
+}
+@media (min-width: 768px) {
+  .lender-list .media-object {
+    display: inline-block;
+  }
 }
 
 .off {
@@ -1906,7 +1935,7 @@ a.button-medium:hover {
 
 .list-group {
   margin-bottom: 0;
-  text-align: center;
+  text-align: left;
 }
 .list-group .list-group-item-heading {
   font-size: 16px;
@@ -1919,9 +1948,6 @@ a.button-medium:hover {
 }
 .list-group li {
   font-size: 14px;
-}
-.list-group .btn-lg {
-  margin: 20px;
 }
 
 .results-wizard {
@@ -2218,6 +2244,7 @@ a:focus {
 .bs-wizard {
   padding: 0 0 10px 0;
   margin-top: 65px;
+  min-width: 430px;
 }
 .bs-wizard .bs-wizard-step {
   padding: 0;
@@ -2481,6 +2508,10 @@ a:focus {
   #top-nav ul li a#active {
     color: #323232;
     background-color: #ddd;
+  }
+
+  .lending-list .img-responsive {
+    margin: 0 auto;
   }
 
   .mobile-limit {
