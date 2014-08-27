@@ -651,6 +651,12 @@ body {
   background-color: #d5d6d6;
 }
 
+.market-bg {
+  height: 400px !important;
+  background: radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #5091cd 10px, rgba(96, 16, 48, 0) 11px) 0px 10px, radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #5091cd 10px, rgba(96, 16, 48, 0) 11px), #3c3d3d;
+  background-size: 20px 20px;
+}
+
 .striped-bg {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAALklEQVQIW2O8ev16PQMy+P+/gRFFECjAwMiIJAgVAGmCqEQSgAheu/YfpAXZWABGExuOuoTJsQAAAABJRU5ErkJggg==);
 }
@@ -693,6 +699,36 @@ body {
 .secondary-hero p {
   font-size: 18px;
   min-height: 40px;
+}
+
+.marketing-hero h2 {
+  color: white;
+  font-size: 32px;
+  line-height: 0;
+  margin-bottom: 20px;
+}
+.marketing-hero p {
+  color: white;
+  font-family: "Proxima Nova Semi-Bold";
+  font-size: 18px;
+}
+.marketing-hero .button-large, .marketing-hero .button-medium {
+  font-size: 18px;
+}
+.marketing-hero .button-large:first-child, .marketing-hero .button-medium:first-child {
+  margin-right: 10px;
+}
+.marketing-hero .img-container img {
+  -webkit-box-shadow: 0 3px 10px 0 #3c3d3d;
+  box-shadow: 0 3px 10px 0 #3c3d3d;
+}
+.marketing-hero .marketing-btn-group {
+  position: absolute;
+  top: 260px;
+}
+
+.market-secondary h2 {
+  margin-top: 60px;
 }
 
 .page-header {
@@ -1091,9 +1127,11 @@ ul#footer-nav li {
     margin-left: 0;
   }
 }
-#middle-wizard.step-box .styled-select .form-control {
-  font-size: 12px;
-  padding-left: 10px;
+@media (max-width: 480px) {
+  #middle-wizard.step-box .styled-select .form-control {
+    font-size: 12px;
+    padding-left: 10px;
+  }
 }
 
 #bottom-wizard {
@@ -1932,7 +1970,7 @@ ul.data-list-2 li label.error {
   margin-bottom: 20px;
 }
 .button-medium.loan-type-btn:hover {
-  color: white;
+  background: transparent;
 }
 
 a.button-large:hover, a.button-medium:hover {
@@ -1992,6 +2030,10 @@ a.button-medium:hover {
   background-color: #3c3d3d;
   border-color: #3c3d3d;
   color: white;
+}
+
+.marketing-btn-group {
+  position: absolute;
 }
 
 .list-group {
@@ -2573,17 +2615,29 @@ a:focus {
     background-color: #ddd;
   }
 
+  .marketing-hero h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .marketing-hero p {
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .marketing-hero .button-large, .marketing-hero .button-medium {
+    font-size: 16px;
+  }
+
+  .marketing-btn-group {
+    top: 200px !important;
+    right: 20px;
+  }
+
   .compare-box p {
     margin: -30px 10px 20px !important;
   }
   .compare-box .title-block {
     font-size: 18px !important;
-  }
-
-  .button-medium:hover {
-    background: transparent !important;
-    border: 2px solid #5091cd !important;
-    color: #5091cd !important;
   }
 
   .styled-select {
@@ -2683,6 +2737,10 @@ a:focus {
   .nav-sidebar {
     padding-bottom: 115%;
   }
+
+  .marketing-btn-group {
+    top: 240px !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   #middle-wizard.compare-box .home-box {
@@ -2710,6 +2768,18 @@ a:focus {
 
   .box a {
     font-size: 14px;
+  }
+
+  .marketing-hero h2 {
+    font-size: 26px;
+  }
+  .marketing-hero p {
+    font-size: 18px;
+  }
+  .marketing-hero .button-large, .marketing-hero .button-medium {
+    font-size: 16px;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
