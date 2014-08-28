@@ -542,7 +542,7 @@ nav.navbar-default ul li ul li a {
 }
 nav.navbar-default .chat-button {
   position: absolute;
-  top: 20px;
+  top: 28px;
   right: calc(10% - 10px);
 }
 nav.navbar-default .btn-group {
@@ -562,9 +562,11 @@ nav.navbar-default .navbar-collapse {
     position: relative;
     z-index: 1;
     background: white;
-    -webkit-box-shadow: 0 1px 3px 0 #a2a3a3;
-    box-shadow: 0 1px 3px 0 #a2a3a3;
   }
+}
+nav.navbar-default .navbar-collapse.collapse.in {
+  -webkit-box-shadow: 0 1px 0 0 #3c3d3d;
+  box-shadow: 0 1px 0 0 #3c3d3d;
 }
 nav.navbar-default .navbar-collapse.collapse.in ul {
   position: relative;
@@ -589,7 +591,7 @@ nav.navbar-default .navbar-nav li a:hover {
   background: #efefef;
   position: relative;
   height: auto;
-  top: -20px;
+  top: -10px;
   bottom: 0;
   text-align: center;
 }
@@ -653,7 +655,7 @@ body {
 
 .market-bg {
   height: 400px !important;
-  background: radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #5091cd 10px, rgba(96, 16, 48, 0) 11px) 0px 10px, radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #5091cd 10px, rgba(96, 16, 48, 0) 11px), #3c3d3d;
+  background: radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #555757 10px, rgba(96, 16, 48, 0) 11px) 0px 10px, radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #555757 10px, rgba(96, 16, 48, 0) 11px), #3c3d3d;
   background-size: 20px 20px;
 }
 
@@ -705,12 +707,12 @@ body {
   color: white;
   font-size: 32px;
   line-height: 0;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .marketing-hero p {
   color: white;
   font-family: "Proxima Nova Semi-Bold";
-  font-size: 18px;
 }
 .marketing-hero .button-large, .marketing-hero .button-medium {
   font-size: 18px;
@@ -725,10 +727,6 @@ body {
 .marketing-hero .marketing-btn-group {
   position: absolute;
   top: 260px;
-}
-
-.market-secondary h2 {
-  margin-top: 60px;
 }
 
 .page-header {
@@ -803,7 +801,7 @@ body {
 }
 
 .page-box {
-  min-height: 210px;
+  min-height: 220px;
 }
 .page-box ul {
   text-align: left;
@@ -1971,6 +1969,7 @@ ul.data-list-2 li label.error {
 }
 .button-medium.loan-type-btn:hover {
   background: transparent;
+  color: #5091cd;
 }
 
 a.button-large:hover, a.button-medium:hover {
@@ -2579,10 +2578,24 @@ a:focus {
     padding-left: 2em;
     padding-right: 2em;
   }
+
+  .marketing-hero {
+    padding-right: 1em;
+  }
+  .marketing-hero h2 {
+    margin-bottom: 25px;
+  }
+  .marketing-hero p {
+    font-size: 18px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .loan-col-custom ul {
-    min-height: 185px;
+    min-height: 145px;
+  }
+
+  .market-secondary h2 {
+    margin-top: 60px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -2616,16 +2629,17 @@ a:focus {
   }
 
   .marketing-hero h2 {
-    font-size: 26px;
+    font-size: 24px;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .marketing-hero p {
-    font-size: 16px;
     padding-left: 15px;
     padding-right: 15px;
   }
   .marketing-hero .button-large, .marketing-hero .button-medium {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .marketing-btn-group {
@@ -2743,16 +2757,10 @@ a:focus {
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
-  #middle-wizard.compare-box .home-box {
-    min-height: 280px;
-  }
-  #middle-wizard.compare-box .home-box ul {
-    min-height: 126px;
-  }
-  #middle-wizard.compare-box .loan-col-custom {
+  #middle-wizard .loan-col-custom {
     width: 50%;
   }
-  #middle-wizard.compare-box .loan-col-custom:last-child {
+  #middle-wizard .loan-col-custom:last-child {
     margin-left: 25%;
   }
 
@@ -2762,6 +2770,13 @@ a:focus {
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
+  #middle-wizard.compare-box .home-box {
+    min-height: 240px;
+  }
+  #middle-wizard.compare-box .home-box ul {
+    min-height: 88px;
+  }
+
   .secondary-hero p {
     font-size: 16px;
   }
@@ -2774,7 +2789,7 @@ a:focus {
     font-size: 26px;
   }
   .marketing-hero p {
-    font-size: 18px;
+    font-size: 16px;
   }
   .marketing-hero .button-large, .marketing-hero .button-medium {
     font-size: 16px;
